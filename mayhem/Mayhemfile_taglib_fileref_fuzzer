@@ -1,0 +1,10 @@
+project: savantenvs/taglib
+target: taglib_fileref_fuzzer
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/taglib_fileref_fuzzer/testsuite
+cmds:
+  - cmd: /mayhem/taglib_fileref_fuzzer
+    libfuzzer: true
+    timeout: 10
+    dictionary: /mayhem/tests/fuzzing/taglib.dict
