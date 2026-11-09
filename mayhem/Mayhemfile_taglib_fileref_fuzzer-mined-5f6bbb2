@@ -1,0 +1,11 @@
+# seed-from: https://app.mayhem.security/savantenvs/taglib/taglib-fileref-fuzzer
+project: savantenvs/taglib
+target: taglib_fileref_fuzzer-mined-5f6bbb2
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/taglib_fileref_fuzzer-mined-5f6bbb2/testsuite
+cmds:
+  - cmd: /mayhem/taglib_fileref_fuzzer
+    libfuzzer: true
+    timeout: 10
+    dictionary: /mayhem/mayhem/taglib_fileref_fuzzer-mined-5f6bbb2/taglib.dict
