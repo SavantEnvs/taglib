@@ -1,0 +1,4 @@
+# BuildKit uses this in preference to a root .dockerignore for `-f mayhem/Dockerfile`.
+# Keep .git (the image carries the full mayhem branch); drop host build output.
+/build/
+/ctrf-report.json
